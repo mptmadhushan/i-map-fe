@@ -1,0 +1,32 @@
+.news-title {
+    font-family: Open Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.news-sub-title {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #3B71CA
+}
+
+p {
+    margin-bottom: 8px
+}
+
+.date {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+}

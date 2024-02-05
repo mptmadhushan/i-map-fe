@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './home.module.css';
-import { CustomButton,ProjectCard } from '@/components';
-import {useIsMobile } from '@/utils/hooks';
+import { CustomButton, ProjectCard, NewsCard } from '@/components';
+import { useIsMobile } from '@/utils/hooks';
 
 const index = () => {
   const handleClick = () => {
@@ -9,26 +9,34 @@ const index = () => {
   };
   const isMobile = useIsMobile();
   const dataProjectCard = {
-    id:1,
-    title:'Acme Project',
-    subTitle:'Colombo, Sri Lanka',
-    data:[
-    {
-      name: 'Commodities(s)',
-      desc: 'Gold',
-    },
-    {
-      name: 'Status',
-      desc: 'Advanced Exploration',
-    },
-    {
-      name: 'Size',
-      desc: '150.3 sq kms',
-    },
-    {
-      name: 'Ownership',
-      desc: 'Monument Mining Limited',
-    },]
+    id: 1,
+    title: 'Acme Project',
+    subTitle: 'Colombo, Sri Lanka',
+    data: [
+      {
+        name: 'Commodities(s)',
+        desc: 'Gold',
+      },
+      {
+        name: 'Status',
+        desc: 'Advanced Exploration',
+      },
+      {
+        name: 'Size',
+        desc: '150.3 sq kms',
+      },
+      {
+        name: 'Ownership',
+        desc: 'Monument Mining Limited',
+      },
+    ],
+  };
+  const dataNewsCard = {
+    id: 1,
+    title: 'Monument Announces Update at the Selinsing Gold Mine in Malaysia',
+    subTitle: 'Monument Mining Limited',
+    date: '12/01/2024',
+    desc: 'Monument Mining Limited (TSX-V: MMY and FSE: D7Q1) ("Monument" or the "Company") is pleased to announce Monument Mining Limited (TSX-V: MMY and FSE: D7Q1) ("Monument" or the "Company") is pleased to announce',
   };
   return (
     <div className={styles.root}>
@@ -40,7 +48,11 @@ const index = () => {
         color="primary"
         backgroundColor="gray"
       />
-      <ProjectCard  onClick={handleClick} data={dataProjectCard} title="" subTitle=""/>
+      <div>
+        
+      </div>
+      <ProjectCard onClick={handleClick} data={dataProjectCard} />
+      <NewsCard onClick={handleClick} data={dataNewsCard} />
     </div>
   );
 };
