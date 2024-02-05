@@ -9,7 +9,7 @@ const CustomButton = ({ onClick, label, color, disabled, buttonStyle }) => {
     <Button
       color={color}
       style={buttonStyle}
-      onClick={onClick}
+      onClick   onClick={onClick}
       disabled={disabled}
     >
       {label}

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './home.module.css';
-import { CustomButton } from '@/components';
+import { CustomButton,ProjectCard } from '@/components';
 import {useIsMobile } from '@/utils/hooks';
 
 const index = () => {
@@ -8,7 +8,28 @@ const index = () => {
     alert('Button Clicked!');
   };
   const isMobile = useIsMobile();
-
+  const dataProjectCard = {
+    id:1,
+    title:'Acme Project',
+    subTitle:'Colombo, Sri Lanka',
+    data:[
+    {
+      name: 'Commodities(s)',
+      desc: 'Gold',
+    },
+    {
+      name: 'Status',
+      desc: 'Advanced Exploration',
+    },
+    {
+      name: 'Size',
+      desc: '150.3 sq kms',
+    },
+    {
+      name: 'Ownership',
+      desc: 'Monument Mining Limited',
+    },]
+  };
   return (
     <div className={styles.root}>
       <h1>{isMobile ? 'Mobile View' : 'Desktop View'}</h1>
@@ -19,6 +40,7 @@ const index = () => {
         color="primary"
         backgroundColor="gray"
       />
+      <ProjectCard  onClick={handleClick} data={dataProjectCard} title="" subTitle=""/>
     </div>
   );
 };
