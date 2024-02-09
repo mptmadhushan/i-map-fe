@@ -1,6 +1,6 @@
 import React from 'react';
 import './home.css';
-import { CustomButton, ProjectCard, NewsCard, MainCard } from '@/components';
+import {  ProjectCard, NewsCard, MainCard } from '@/components';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 const index = () => {
   const position = [51.505, -0.09];
